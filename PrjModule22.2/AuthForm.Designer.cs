@@ -1,7 +1,7 @@
 ﻿
 namespace PrjModule22._2
 {
-    partial class Form2
+    partial class AuthForm
     {
         /// <summary>
         /// Required designer variable.
@@ -44,9 +44,9 @@ namespace PrjModule22._2
             this.regLogButton.Name = "regLogButton";
             this.regLogButton.Size = new System.Drawing.Size(87, 23);
             this.regLogButton.TabIndex = 0;
-            this.regLogButton.Text = "Registration";
+            this.regLogButton.Text = "Login";
             this.regLogButton.UseVisualStyleBackColor = true;
-            this.regLogButton.Click += new System.EventHandler(this.regLogButton_Click);
+            this.regLogButton.Click += new System.EventHandler(this.RegLogButton_Click);
             // 
             // userNameTextBox
             // 
@@ -101,9 +101,9 @@ namespace PrjModule22._2
             this.confirmButton.TabIndex = 0;
             this.confirmButton.Text = "Registration";
             this.confirmButton.UseVisualStyleBackColor = true;
-            this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
+            this.confirmButton.Click += new System.EventHandler(this.ConfirmButton_Click);
             // 
-            // Form2
+            // AuthForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -115,7 +115,7 @@ namespace PrjModule22._2
             this.Controls.Add(this.userNameTextBox);
             this.Controls.Add(this.confirmButton);
             this.Controls.Add(this.regLogButton);
-            this.Name = "Form2";
+            this.Name = "AuthForm";
             this.Text = "SingUP Form";
             this.ResumeLayout(false);
             this.PerformLayout();
