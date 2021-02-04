@@ -22,6 +22,5 @@ namespace PrjModule22._1
                 Console.WriteLine(ex.Message);
             }
         }
-        
     }
 }

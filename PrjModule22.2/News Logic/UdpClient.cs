@@ -4,13 +4,12 @@ using System.Net.Sockets;
 using System.Text;
 using PrjModule22._2.Misc;
 
-namespace PrjModule22._1
+namespace PrjModule22._2.News_Logic
 {
     public class UdpClient
     {
         public delegate void AccountHandler(object sender, BroadcastEventArgs e);
 
-        private const int RemotePort = 8001; // Port for sending
         private const int LocalPort = 8001; // Local receiving port
         public IPAddress RemoteAddress; // Host for sending
         public event AccountHandler Broadcast;
@@ -18,7 +17,7 @@ namespace PrjModule22._1
         public void BroadcastMessage(string message)
         {
             var sender = new System.Net.Sockets.UdpClient();
-            var endPoint = new IPEndPoint(RemoteAddress, RemotePort);
+            var endPoint = new IPEndPoint(RemoteAddress, LocalPort);
 
             try
             {
@@ -55,17 +54,13 @@ namespace PrjModule22._1
                     Broadcast?.Invoke(this, new BroadcastEventArgs(message));
                 }
             }
-            catch (Exception ex)
-            {
-                //Ignored
-            }
             finally
             {
                 receiver.Close();
             }
         }
 
-        private void SendMessage(string message, System.Net.Sockets.UdpClient sender, IPEndPoint endPoint)
+        private static void SendMessage(string message, System.Net.Sockets.UdpClient sender, IPEndPoint endPoint)
         {
             var data = Encoding.Unicode.GetBytes(message);
             sender.Send(data, data.Length, endPoint);

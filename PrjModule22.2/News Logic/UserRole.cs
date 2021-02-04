@@ -1,4 +1,4 @@
-﻿namespace PrjModule22._2.Misc
+﻿namespace PrjModule22._2.News_Logic
 {
     public enum UserRole
     {

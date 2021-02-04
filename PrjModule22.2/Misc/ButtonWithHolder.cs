@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Forms;
+using PrjModule22._2.News_Logic;
 
 namespace PrjModule22._2.Misc
 {
     public class ButtonWithHolder : Button
     {
-        public Comment Comment { get; set; }
-        public IList<Comment> SubComment { get; set; }
-        public NewsHolder NewsHolder { get; set; }
-        public IList<NewsHolder> SubNews { get; set; }
+        public Comment Comment { get; init; }
+        public IList<Comment> SubComment { get; init; }
+        public NewsHolder NewsHolder { get; init; }
     }
 }

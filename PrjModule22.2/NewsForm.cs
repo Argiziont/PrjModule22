@@ -5,8 +5,8 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
-using PrjModule22._1;
 using PrjModule22._2.Misc;
+using PrjModule22._2.News_Logic;
 
 namespace PrjModule22._2
 {
@@ -64,7 +64,7 @@ namespace PrjModule22._2
                     Size = new Size(461, 50),
                     TabIndex = 0,
                     ReadOnly = true,
-                    Text = news.Text + "\n    made by " + news.Sender.Name
+                    Text = news.Text + @" made by " + news.Sender.Name
                 };
                 var mainRemoveButton = new ButtonWithHolder
                 {
@@ -83,7 +83,7 @@ namespace PrjModule22._2
                 };
 
 
-                mainRemoveButton.Click += OnMainRemoveButtonOnClick;
+                mainRemoveButton.Click += MainRemoveButtonOnClick;
 
                 var mainCommentButton = new ButtonWithHolder
                 {
@@ -186,7 +186,7 @@ namespace PrjModule22._2
             //IterateThroughNews();
         }
 
-        private void OnMainRemoveButtonOnClick(object sender, EventArgs _)
+        private void MainRemoveButtonOnClick(object sender, EventArgs _)
         {
             if (AuthForm.Role != UserRole.Moderator)
             {

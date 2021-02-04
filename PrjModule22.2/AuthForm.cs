@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using Newtonsoft.Json;
-using PrjModule22._2.Misc;
+using PrjModule22._2.News_Logic;
 
 namespace PrjModule22._2
 {
