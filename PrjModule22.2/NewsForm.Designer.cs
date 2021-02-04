@@ -30,26 +30,46 @@ namespace PrjModule22._2
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.RemoveNewsButton = new System.Windows.Forms.Button();
             this.RemoveComment = new System.Windows.Forms.Button();
+            this.MainCommentButton = new System.Windows.Forms.Button();
             this.AddComment = new System.Windows.Forms.Button();
             this.CommentLine = new System.Windows.Forms.TextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.AddNewsButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.RemoveNewsButton);
             this.panel1.Controls.Add(this.RemoveComment);
+            this.panel1.Controls.Add(this.MainCommentButton);
             this.panel1.Controls.Add(this.AddComment);
             this.panel1.Controls.Add(this.CommentLine);
             this.panel1.Controls.Add(this.richTextBox1);
             this.panel1.Location = new System.Drawing.Point(12, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(500, 100);
+            this.panel1.Size = new System.Drawing.Size(535, 100);
             this.panel1.TabIndex = 0;
             this.panel1.Visible = false;
+            // 
+            // RemoveNewsButton
+            // 
+            this.RemoveNewsButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.RemoveNewsButton.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RemoveNewsButton.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.RemoveNewsButton.Location = new System.Drawing.Point(475, 10);
+            this.RemoveNewsButton.Name = "RemoveNewsButton";
+            this.RemoveNewsButton.Size = new System.Drawing.Size(25, 23);
+            this.RemoveNewsButton.TabIndex = 1;
+            this.RemoveNewsButton.Text = "x";
+            this.RemoveNewsButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.RemoveNewsButton.UseVisualStyleBackColor = true;
             // 
             // RemoveComment
             // 
@@ -63,6 +83,19 @@ namespace PrjModule22._2
             this.RemoveComment.Text = "x";
             this.RemoveComment.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.RemoveComment.UseVisualStyleBackColor = true;
+            // 
+            // MainCommentButton
+            // 
+            this.MainCommentButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.MainCommentButton.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MainCommentButton.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.MainCommentButton.Location = new System.Drawing.Point(475, 37);
+            this.MainCommentButton.Name = "MainCommentButton";
+            this.MainCommentButton.Size = new System.Drawing.Size(25, 23);
+            this.MainCommentButton.TabIndex = 1;
+            this.MainCommentButton.Text = "+";
+            this.MainCommentButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.MainCommentButton.UseVisualStyleBackColor = true;
             // 
             // AddComment
             // 
@@ -92,28 +125,49 @@ namespace PrjModule22._2
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
-            // button3
+            // menuStrip1
             // 
-            this.button3.Location = new System.Drawing.Point(404, 388);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.menuStrip1.AllowDrop = true;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AddNewsButton});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(559, 24);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // AddNewsButton
+            // 
+            this.AddNewsButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newToolStripMenuItem});
+            this.AddNewsButton.Name = "AddNewsButton";
+            this.AddNewsButton.Size = new System.Drawing.Size(92, 20);
+            this.AddNewsButton.Text = "Manage news";
+            // 
+            // newToolStripMenuItem
+            // 
+            this.newToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.newToolStripMenuItem.Text = "&Add new news";
             // 
             // NewsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 450);
-            this.Controls.Add(this.button3);
+            this.ClientSize = new System.Drawing.Size(559, 450);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "NewsForm";
             this.Text = "News Form";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -124,7 +178,11 @@ namespace PrjModule22._2
         private System.Windows.Forms.Button AddComment;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.TextBox CommentLine;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button MainCommentButton;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem AddNewsButton;
+        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+        private System.Windows.Forms.Button RemoveNewsButton;
     }
 }
 
